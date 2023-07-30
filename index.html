@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Status Page</title>
+</head>
+
+<body>
+    <div id="statusContainer">
+        <h1>Status: <span id="status">Checking...</span></h1>
+    </div>
+
+    <script>
+        function checkStatus() {
+            const url = "https://ndevapi.com"; // Replace with the URL of the website you want to check
+            const statusElement = document.getElementById("status");
+
+            // Create an XMLHttpRequest object
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        statusElement.textContent = "Website is up and running!";
+                    } else {
+                        statusElement.textContent = "Website is down.";
+                    }
+                }
+            };
+
+            // Send the HTTP GET request to the target website
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+
+        // Call the checkStatus function when the page loads
+        checkStatus();
+    </script>
+</body>
+
+</html>
