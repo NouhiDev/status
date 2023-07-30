@@ -5,6 +5,7 @@
     <title>Status Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -13,50 +14,10 @@
         <h1>API Status: <span class="status">Checking...</span></h1>
         <p>Response Time: <span class="response-time">N/A</span></p>
     </div>
-
-    <script>
-        function checkStatus() {
-            const url = "https://ndevapi.com";
-            const statusElement = document.querySelector(".status");
-            const responseTimeElement = document.querySelector(".response-time");
-
-            // Create an XMLHttpRequest object
-            const xhr = new XMLHttpRequest();
-            const startTime = new Date().getTime();
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    const endTime = new Date().getTime();
-                    const responseTime = endTime - startTime;
-
-                    responseTimeElement.textContent = responseTime + " ms";
-
-                    if (xhr.status === 200) {
-                        if (responseTime >= 0 && responseTime < 250) {
-                        statusElement.textContent = "Operational";
-                        statusElement.classList.remove("degraded", "outage");
-                        statusElement.classList.add("operational");
-                    } else if (responseTime >= 250) {
-                        statusElement.textContent = "Degraded Performance";
-                        statusElement.classList.remove("operational", "outage");
-                        statusElement.classList.add("degraded");
-                    }
-                    } else {
-                        satusElement.textContent = "Major Outage";
-                        statusElement.classList.remove("operational", "degraded");
-                        statusElement.classList.add("outage");
-                    }
-                }
-            };
-
-            xhr.open("GET", url, true);
-            xhr.send();
-        }
-
-        checkStatus();
-
-        setInterval(checkStatus, 1000);
-    </script>
+    <div class="container">
+        <h1>Roblox Horrorlist Status: <span class="status-rblx">Checking...</span></h1>
+        <p>Response Time: <span class="response-time-rblx">N/A</span></p>
+    </div>
 </body>
 
 </html>

@@ -11,6 +11,7 @@ body {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -25,13 +26,13 @@ p {
     color: #555;
 }
 
-.status {
+.status, .status-rblx {
     font-weight: bold;
     font-size: 24px;
     color: #007bff;
 }
 
-.response-time {
+.response-time, .response-time-rblx {
     font-weight: bold;
     font-size: 18px;
     color: #555;
@@ -54,18 +55,15 @@ p {
 
 
 .operational {
-    background-color: #75d18b;
-    color: #fff;
+    color: #75d18b;
 }
 
 .degraded {
-    background-color: #ffc107;
-    color: #333;
+    color: #ffc107;
 }
 
 .outage {
-    background-color: #dc3545;
-    color: #fff;
+    color: #dc3545;
 }
 
 .title {
