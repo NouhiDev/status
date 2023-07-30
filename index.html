@@ -3,38 +3,59 @@
 
 <head>
     <title>Status Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="statusContainer">
-        <h1>Status: <span id="status">Checking...</span></h1>
+    <h1 class="title">NDev API Status</h1>
+    <div class="container">
+        <h1>API Status: <span class="status">Checking...</span></h1>
+        <p>Response Time: <span class="response-time">N/A</span></p>
     </div>
 
     <script>
         function checkStatus() {
-            const url = "https://ndevapi.com"; // Replace with the URL of the website you want to check
-            const statusElement = document.getElementById("status");
+            const url = "https://ndevapi.com";
+            const statusElement = document.querySelector(".status");
+            const responseTimeElement = document.querySelector(".response-time");
 
             // Create an XMLHttpRequest object
             const xhr = new XMLHttpRequest();
+            const startTime = new Date().getTime();
 
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
+                    const endTime = new Date().getTime();
+                    const responseTime = endTime - startTime;
+
+                    responseTimeElement.textContent = responseTime + " ms";
+
                     if (xhr.status === 200) {
-                        statusElement.textContent = "API is up and running!";
+                        if (responseTime >= 0 && responseTime < 250) {
+                        statusElement.textContent = "Operational";
+                        statusElement.classList.remove("degraded", "outage");
+                        statusElement.classList.add("operational");
+                    } else if (responseTime >= 250) {
+                        statusElement.textContent = "Degraded Performance";
+                        statusElement.classList.remove("operational", "outage");
+                        statusElement.classList.add("degraded");
+                    }
                     } else {
-                        statusElement.textContent = "API is down.";
+                        satusElement.textContent = "Major Outage";
+                        statusElement.classList.remove("operational", "degraded");
+                        statusElement.classList.add("outage");
                     }
                 }
             };
 
-            // Send the HTTP GET request to the target website
             xhr.open("GET", url, true);
             xhr.send();
         }
 
-        // Call the checkStatus function when the page loads
         checkStatus();
+
+        setInterval(checkStatus, 1000);
     </script>
 </body>
 
