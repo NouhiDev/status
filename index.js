@@ -1,1 +1,82 @@
-var _0x65e1=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x6E\x64\x65\x76\x61\x70\x69\x2E\x63\x6F\x6D","\x2E\x73\x74\x61\x74\x75\x73","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x2E\x72\x65\x73\x70\x6F\x6E\x73\x65\x2D\x74\x69\x6D\x65","\x67\x65\x74\x54\x69\x6D\x65","\x6F\x6E\x72\x65\x61\x64\x79\x73\x74\x61\x74\x65\x63\x68\x61\x6E\x67\x65","\x72\x65\x61\x64\x79\x53\x74\x61\x74\x65","\x44\x4F\x4E\x45","\x74\x65\x78\x74\x43\x6F\x6E\x74\x65\x6E\x74","\x20\x6D\x73","\x73\x74\x61\x74\x75\x73","\x4F\x70\x65\x72\x61\x74\x69\x6F\x6E\x61\x6C","\x64\x65\x67\x72\x61\x64\x65\x64","\x6F\x75\x74\x61\x67\x65","\x72\x65\x6D\x6F\x76\x65","\x63\x6C\x61\x73\x73\x4C\x69\x73\x74","\x6F\x70\x65\x72\x61\x74\x69\x6F\x6E\x61\x6C","\x61\x64\x64","\x44\x65\x67\x72\x61\x64\x65\x64\x20\x50\x65\x72\x66\x6F\x72\x6D\x61\x6E\x63\x65","\x4D\x61\x6A\x6F\x72\x20\x4F\x75\x74\x61\x67\x65","\x47\x45\x54","\x6F\x70\x65\x6E","\x73\x65\x6E\x64","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x6E\x6F\x75\x68\x69\x2E\x64\x65\x76\x2F\x72\x6F\x62\x6C\x6F\x78\x2D\x68\x6F\x72\x72\x6F\x72\x6C\x69\x73\x74\x2F","\x2E\x73\x74\x61\x74\x75\x73\x2D\x72\x62\x6C\x78","\x2E\x72\x65\x73\x70\x6F\x6E\x73\x65\x2D\x74\x69\x6D\x65\x2D\x72\x62\x6C\x78"];function checkStatusAPI(){const _0xe58ex2=_0x65e1[0];const _0xe58ex3=document[_0x65e1[2]](_0x65e1[1]);const _0xe58ex4=document[_0x65e1[2]](_0x65e1[3]);const _0xe58ex5= new XMLHttpRequest();const _0xe58ex6= new Date()[_0x65e1[4]]();_0xe58ex5[_0x65e1[5]]= function(){if(_0xe58ex5[_0x65e1[6]]=== XMLHttpRequest[_0x65e1[7]]){const _0xe58ex7= new Date()[_0x65e1[4]]();const _0xe58ex8=_0xe58ex7- _0xe58ex6;_0xe58ex4[_0x65e1[8]]= _0xe58ex8+ _0x65e1[9];if(_0xe58ex5[_0x65e1[10]]=== 200){if(_0xe58ex8>= 0&& _0xe58ex8< 1000){_0xe58ex3[_0x65e1[8]]= _0x65e1[11];_0xe58ex3[_0x65e1[15]][_0x65e1[14]](_0x65e1[12],_0x65e1[13]);_0xe58ex3[_0x65e1[15]][_0x65e1[17]](_0x65e1[16])}else {if(_0xe58ex8>= 1000){_0xe58ex3[_0x65e1[8]]= _0x65e1[18];_0xe58ex3[_0x65e1[15]][_0x65e1[14]](_0x65e1[16],_0x65e1[13]);_0xe58ex3[_0x65e1[15]][_0x65e1[17]](_0x65e1[12])}}}else {_0xe58ex3[_0x65e1[8]]= _0x65e1[19];_0xe58ex3[_0x65e1[15]][_0x65e1[14]](_0x65e1[16],_0x65e1[12]);_0xe58ex3[_0x65e1[15]][_0x65e1[17]](_0x65e1[13])}}};_0xe58ex5[_0x65e1[21]](_0x65e1[20],_0xe58ex2,true);_0xe58ex5[_0x65e1[22]]()}checkStatusAPI();function checkStatusRBLX(){const _0xe58ex2=_0x65e1[23];const _0xe58ex3=document[_0x65e1[2]](_0x65e1[24]);const _0xe58ex4=document[_0x65e1[2]](_0x65e1[25]);const _0xe58ex5= new XMLHttpRequest();const _0xe58ex6= new Date()[_0x65e1[4]]();_0xe58ex5[_0x65e1[5]]= function(){if(_0xe58ex5[_0x65e1[6]]=== XMLHttpRequest[_0x65e1[7]]){const _0xe58ex7= new Date()[_0x65e1[4]]();const _0xe58ex8=_0xe58ex7- _0xe58ex6;_0xe58ex4[_0x65e1[8]]= _0xe58ex8+ _0x65e1[9];if(_0xe58ex5[_0x65e1[10]]=== 200){if(_0xe58ex8>= 0&& _0xe58ex8< 1000){_0xe58ex3[_0x65e1[8]]= _0x65e1[11];_0xe58ex3[_0x65e1[15]][_0x65e1[14]](_0x65e1[12],_0x65e1[13]);_0xe58ex3[_0x65e1[15]][_0x65e1[17]](_0x65e1[16])}else {if(_0xe58ex8>= 1000){_0xe58ex3[_0x65e1[8]]= _0x65e1[18];_0xe58ex3[_0x65e1[15]][_0x65e1[14]](_0x65e1[16],_0x65e1[13]);_0xe58ex3[_0x65e1[15]][_0x65e1[17]](_0x65e1[12])}}}else {_0xe58ex3[_0x65e1[8]]= _0x65e1[19];_0xe58ex3[_0x65e1[15]][_0x65e1[14]](_0x65e1[16],_0x65e1[12]);_0xe58ex3[_0x65e1[15]][_0x65e1[17]](_0x65e1[13])}}};_0xe58ex5[_0x65e1[21]](_0x65e1[20],_0xe58ex2,true);_0xe58ex5[_0x65e1[22]]()}checkStatusRBLX();setInterval(checkStatusAPI,1000);setInterval(checkStatusRBLX,1000)
+function checkStatusAPI() {
+    const url = "https://ndevapi.com";
+    const statusElement = document.querySelector(".status");
+    const responseTimeElement = document.querySelector(".response-time");
+
+    // Create an XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+    const startTime = new Date().getTime();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            const endTime = new Date().getTime();
+            const responseTime = endTime - startTime;
+
+            if (xhr.status === 200) {
+                if (responseTime >= 0 && responseTime < 1000) {
+                    statusElement.textContent = "Operational";
+                    statusElement.classList.remove("degraded", "outage");
+                    statusElement.classList.add("operational");
+                    responseTimeElement.textContent = responseTime + " ms";
+                } else if (responseTime >= 1000) {
+                    statusElement.textContent = "Degraded Performance";
+                    statusElement.classList.remove("operational", "outage");
+                    statusElement.classList.add("degraded");
+                    responseTimeElement.textContent = responseTime + " ms";
+                }
+            } else {
+                statusElement.textContent = "Major Outage";
+                statusElement.classList.remove("operational", "degraded");
+                statusElement.classList.add("outage");
+            }
+        }
+    };
+
+    xhr.open("GET", url, true);
+    xhr.send();
+}
+
+checkStatusAPI();
+
+function checkStatusRBLX() {
+    const url = "https://nouhi.dev/roblox-horrorlist/";
+    const statusElement = document.querySelector(".status-rblx");
+    const responseTimeElement = document.querySelector(".response-time-rblx");
+
+    // Create an XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+    const startTime = new Date().getTime();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            const endTime = new Date().getTime();
+            const responseTime = endTime - startTime;
+
+            if (xhr.status === 200) {
+                if (responseTime >= 0 && responseTime < 1000) {
+                    statusElement.textContent = "Operational";
+                    statusElement.classList.remove("degraded", "outage");
+                    statusElement.classList.add("operational");
+                    responseTimeElement.textContent = responseTime + " ms";
+                } else if (responseTime >= 1000) {
+                    statusElement.textContent = "Degraded Performance";
+                    statusElement.classList.remove("operational", "outage");
+                    statusElement.classList.add("degraded");
+                    responseTimeElement.textContent = responseTime + " ms";
+                }
+            } else {
+                statusElement.textContent = "Major Outage";
+                statusElement.classList.remove("operational", "degraded");
+                statusElement.classList.add("outage");
+            }
+        }
+    };
+
+    xhr.open("GET", url, true);
+    xhr.send();
+}
+
+checkStatusRBLX();
+
+setInterval(checkStatusAPI, 1000);
+setInterval(checkStatusRBLX, 1000);
