@@ -21,9 +21,9 @@
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
-                        statusElement.textContent = "Website is up and running!";
+                        statusElement.textContent = "API is up and running!";
                     } else {
-                        statusElement.textContent = "Website is down.";
+                        statusElement.textContent = "API is down.";
                     }
                 }
             };
