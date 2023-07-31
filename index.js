@@ -39,7 +39,7 @@ function checkStatusAPI() {
 checkStatusAPI();
 
 function checkStatusRBLX() {
-    const url = "https://nouhi.dev/roblox-horrorlist/";
+    const url = "https://robloxhorrorlist.com/";
     const statusElement = document.querySelector(".status-rblx");
     const responseTimeElement = document.querySelector(".response-time-rblx");
 
