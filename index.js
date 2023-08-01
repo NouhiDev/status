@@ -13,12 +13,12 @@ function checkStatusAPI() {
             const responseTime = endTime - startTime;
 
             if (xhr.status === 200) {
-                if (responseTime >= 0 && responseTime < 1000) {
+                if (responseTime >= 0 && responseTime < 60) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
                     statusElement.classList.add("operational");
                     responseTimeElement.textContent = responseTime + " ms";
-                } else if (responseTime >= 1000) {
+                } else if (responseTime >= 60) {
                     statusElement.textContent = "Degraded Performance";
                     statusElement.classList.remove("operational", "outage");
                     statusElement.classList.add("degraded");
@@ -53,12 +53,12 @@ function checkStatusRBLX() {
             const responseTime = endTime - startTime;
 
             if (xhr.status === 200) {
-                if (responseTime >= 0 && responseTime < 1000) {
+                if (responseTime >= 0 && responseTime < 10) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
                     statusElement.classList.add("operational");
                     responseTimeElement.textContent = responseTime + " ms";
-                } else if (responseTime >= 1000) {
+                } else if (responseTime >= 10) {
                     statusElement.textContent = "Degraded Performance";
                     statusElement.classList.remove("operational", "outage");
                     statusElement.classList.add("degraded");
