@@ -52,7 +52,7 @@ function checkStatusGame() {
             const endTime = new Date().getTime();
             const responseTime = endTime - startTime;
 
-            if (xhr.status === 200) {
+            if (xhr.status === 403) {
                 if (responseTime >= 0 && responseTime < 60) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
@@ -92,7 +92,7 @@ function checkStatusIcon() {
             const endTime = new Date().getTime();
             const responseTime = endTime - startTime;
 
-            if (xhr.status === 200) {
+            if (xhr.status === 403) {
                 if (responseTime >= 0 && responseTime < 60) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
