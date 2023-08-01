@@ -1,4 +1,4 @@
-function checkStatusAPI() {
+async function checkStatusAPI() {
     const url = "https://ndevapi.com";
     const statusElement = document.querySelector(".status");
     const responseTimeElement = document.querySelector(".response-time");
@@ -38,7 +38,7 @@ function checkStatusAPI() {
 
 checkStatusAPI();
 
-function checkStatusGame() {
+async function checkStatusGame() {
     const url = "https://ndevapi.com/game-info/1";
     const statusElement = document.querySelector(".status-game");
     const responseTimeElement = document.querySelector(".response-time-game");
@@ -78,7 +78,7 @@ function checkStatusGame() {
 
 checkStatusGame();
 
-function checkStatusIcon() {
+async function checkStatusIcon() {
     const url = "https://ndevapi.com/game-icon/1";
     const statusElement = document.querySelector(".status-icon");
     const responseTimeElement = document.querySelector(".response-time-icon");
