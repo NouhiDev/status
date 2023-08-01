@@ -38,10 +38,10 @@ function checkStatusAPI() {
 
 checkStatusAPI();
 
-function checkStatusRBLX() {
-    const url = "https://robloxhorrorlist.com/";
-    const statusElement = document.querySelector(".status-rblx");
-    const responseTimeElement = document.querySelector(".response-time-rblx");
+function checkStatusGame() {
+    const url = "https://ndevapi.com/game-info/1";
+    const statusElement = document.querySelector(".status-game");
+    const responseTimeElement = document.querySelector(".response-time-game");
 
     // Create an XMLHttpRequest object
     const xhr = new XMLHttpRequest();
@@ -53,12 +53,12 @@ function checkStatusRBLX() {
             const responseTime = endTime - startTime;
 
             if (xhr.status === 200) {
-                if (responseTime >= 0 && responseTime < 10) {
+                if (responseTime >= 0 && responseTime < 60) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
                     statusElement.classList.add("operational");
                     responseTimeElement.textContent = responseTime + " ms";
-                } else if (responseTime >= 10) {
+                } else if (responseTime >= 60) {
                     statusElement.textContent = "Degraded Performance";
                     statusElement.classList.remove("operational", "outage");
                     statusElement.classList.add("degraded");
@@ -76,7 +76,48 @@ function checkStatusRBLX() {
     xhr.send();
 }
 
-checkStatusRBLX();
+checkStatusGame();
+
+function checkStatusIcon() {
+    const url = "https://ndevapi.com/game-icon/1";
+    const statusElement = document.querySelector(".status-icon");
+    const responseTimeElement = document.querySelector(".response-time-icon");
+
+    // Create an XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+    const startTime = new Date().getTime();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            const endTime = new Date().getTime();
+            const responseTime = endTime - startTime;
+
+            if (xhr.status === 200) {
+                if (responseTime >= 0 && responseTime < 60) {
+                    statusElement.textContent = "Operational";
+                    statusElement.classList.remove("degraded", "outage");
+                    statusElement.classList.add("operational");
+                    responseTimeElement.textContent = responseTime + " ms";
+                } else if (responseTime >= 60) {
+                    statusElement.textContent = "Degraded Performance";
+                    statusElement.classList.remove("operational", "outage");
+                    statusElement.classList.add("degraded");
+                    responseTimeElement.textContent = responseTime + " ms";
+                }
+            } else {
+                statusElement.textContent = "Major Outage";
+                statusElement.classList.remove("operational", "degraded");
+                statusElement.classList.add("outage");
+            }
+        }
+    };
+
+    xhr.open("GET", url, true);
+    xhr.send();
+}
+
+checkStatusIcon();
 
 setInterval(checkStatusAPI, 1000);
-setInterval(checkStatusRBLX, 1000);
+setInterval(checkStatusGame, 1000);
+setInterval(checkStatusIcon, 1000);
