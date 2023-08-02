@@ -117,7 +117,3 @@ async function checkStatusIcon() {
 }
 
 checkStatusIcon();
-
-setInterval(checkStatusAPI, 1000);
-setInterval(checkStatusGame, 1000);
-setInterval(checkStatusIcon, 1000);
