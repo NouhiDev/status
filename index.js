@@ -53,12 +53,12 @@ async function checkStatusGame() {
             const responseTime = endTime - startTime;
 
             if (xhr.status === 200) {
-                if (responseTime >= 0 && responseTime < 60) {
+                if (responseTime >= 0 && responseTime < 200) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
                     statusElement.classList.add("operational");
                     responseTimeElement.textContent = responseTime + " ms";
-                } else if (responseTime >= 60) {
+                } else if (responseTime >= 200) {
                     statusElement.textContent = "Degraded Performance";
                     statusElement.classList.remove("operational", "outage");
                     statusElement.classList.add("degraded");
@@ -93,12 +93,12 @@ async function checkStatusIcon() {
             const responseTime = endTime - startTime;
 
             if (xhr.status === 200) {
-                if (responseTime >= 0 && responseTime < 60) {
+                if (responseTime >= 0 && responseTime < 200) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
                     statusElement.classList.add("operational");
                     responseTimeElement.textContent = responseTime + " ms";
-                } else if (responseTime >= 60) {
+                } else if (responseTime >= 200) {
                     statusElement.textContent = "Degraded Performance";
                     statusElement.classList.remove("operational", "outage");
                     statusElement.classList.add("degraded");
