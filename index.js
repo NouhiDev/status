@@ -36,7 +36,7 @@ async function checkStatusAPI() {
     xhr.send();
 }
 
-checkStatusAPI();
+
 
 async function checkStatusGame() {
     const url = "https://ndevapi.com/game-info/1";
@@ -52,7 +52,7 @@ async function checkStatusGame() {
             const endTime = new Date().getTime();
             const responseTime = endTime - startTime;
 
-            if (xhr.status === 200) {
+            if (xhr.status === 403) {
                 if (responseTime >= 0 && responseTime < 60) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
@@ -76,7 +76,7 @@ async function checkStatusGame() {
     xhr.send();
 }
 
-checkStatusGame();
+
 
 async function checkStatusIcon() {
     const url = "https://ndevapi.com/game-icon/1";
@@ -92,7 +92,7 @@ async function checkStatusIcon() {
             const endTime = new Date().getTime();
             const responseTime = endTime - startTime;
 
-            if (xhr.status === 200) {
+            if (xhr.status === 403) {
                 if (responseTime >= 0 && responseTime < 60) {
                     statusElement.textContent = "Operational";
                     statusElement.classList.remove("degraded", "outage");
@@ -116,4 +116,18 @@ async function checkStatusIcon() {
     xhr.send();
 }
 
-checkStatusIcon();
+function myFunction() {
+    checkStatusAPI();
+    checkStatusGame();
+    checkStatusIcon();
+    
+    setTimeout(() => {
+        checkStatusAPI();
+        checkStatusGame();
+        checkStatusIcon();
+    }, 1000);
+}
+
+setInterval(checkStatusAPI, 60000);
+setInterval(checkStatusGame, 60000);
+setInterval(checkStatusIcon, 60000);
